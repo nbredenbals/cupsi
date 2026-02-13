@@ -10,6 +10,7 @@ fi
 
 if [ ! -f /etc/cups/cups-files.conf ]; then
     echo "Copying default /etc/cups/cups-files.conf"
+    cp -R /etc/cups_original/* /etc/cups/
     cp /opt/cupsi/cups-files.conf /etc/cups/cups-files.conf
 fi
 

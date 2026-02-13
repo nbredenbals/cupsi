@@ -40,6 +40,9 @@ COPY --chown=root:root --chmod=644 nsswitch.conf /etc/nsswitch.conf
 RUN rm /etc/cups/cupsd.conf \
        /etc/cups/cups-files.conf
 
+RUN rm /etc/cups_original/cupsd.conf \
+       /etc/cups_original/cups-files.conf
+
 # Run as root, as CUPS needs to bind to low ports and manage devices
 ENTRYPOINT ["/entrypoint.sh"]
 
